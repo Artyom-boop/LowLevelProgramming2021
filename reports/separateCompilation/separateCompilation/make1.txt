@@ -1,0 +1,16 @@
+CC=riscv64-unknown-elf-gcc
+AR=riscv64-unknown-elf-ar
+CFLAGS=-march=rv32i -mabi=ilp32 -O1
+
+all: libgray
+
+libgray: printBin.o gray.o
+	$(AR) -rsc libgray.a printBin.o gray.o
+printBin.o: printBin.c
+	$(CC) $(CFLAGS) -c printBin.c -o printBin.o
+
+grayCode.o: gray.c
+	$(CC) $(CFLAGS) -c gray.c -o gray.o
+
+clean:
+	rm -f *.o *.a

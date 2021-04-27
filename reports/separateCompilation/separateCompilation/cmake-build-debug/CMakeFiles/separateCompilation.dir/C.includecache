@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/1290743/CLionProjects/separateCompilation/printBin.c
+printBin.h
+C:/Users/1290743/CLionProjects/separateCompilation/printBin.h
+
+C:/Users/1290743/CLionProjects/separateCompilation/printBin.h
+stdio.h
+-
+stdlib.h
+-
+
